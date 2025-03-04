@@ -3,7 +3,6 @@
     import {onMount} from "svelte";
     import {tweened} from 'svelte/motion';
     import {cubicOut} from 'svelte/easing';
-    import Parallax from "$lib/components/Parallax.svelte";
 
     let scrollY = tweened(0, {duration: 300, easing: cubicOut});
     let imagesLoaded = {programming: false, hiking: false, photography: false};
@@ -37,7 +36,7 @@
             Greetings to all who see my website. That's if anyone sees it hahahahaha.
         </p>
     </div>
-    <Parallax/>
+    <div class="parallax mt-10"></div>
     <div class="px-10 md:px-20 lg:px-36 xl:px-[200px] pt-10 flex justify-center">
         <div class="max-w-full text-justify">
             <p class="text-sm md:text-lg font-secondary text-text-light dark:text-text-dark">
@@ -83,3 +82,22 @@
         </div>
     </div>
 </div>
+
+<style>
+    .parallax {
+        height: 500px;
+        background-image: url("/assets/images/about.JPG");
+        background-attachment: fixed;
+        background-position: center 20%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .parallax {
+            background-attachment: fixed;
+            background-position: center 50%;
+        }
+    }
+</style>
