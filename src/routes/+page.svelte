@@ -1,7 +1,7 @@
 <script>
     import {onMount} from "svelte";
     import {theme} from "$lib/stores/theme.js";
-    import { gallery } from "$lib/data/gallery.js";
+    import {gallery} from "$lib/data/gallery.js";
 
     let latestImage = gallery.reduce((latest, current) =>
         new Date(current.date) > new Date(latest.date) ? current : latest
@@ -44,7 +44,8 @@
     <div class="pt-[50px] md:pt-[100px] flex flex-col md:flex-row items-center justify-between w-full gap-6">
         <p class="text-sm sm:text-md md:text-lg font-secondary text-text-light dark:text-text-dark text-center md:text-left max-w-[295px] md:max-w-[500px]">
             Welcome to the fdiwangkara website. Actually, this is a website that I created to introduce who
-            <span class={`text-primary-light dark:text-primary-dark transition-all duration-500 ${isPrimary ? 'font-primary' : 'font-third'}`}>FilemOn DiWangkarA</span> is.
+            <span class={`text-primary-light dark:text-primary-dark transition-all duration-500 ${isPrimary ? 'font-primary' : 'font-third'}`}>FilemOn DiWangkarA</span>
+            is.
         </p>
         <div class="relative group mt-[25px] md:mt-0">
             <div class="absolute inset-0 bg-bg-light border border-bg-dark dark:bg-primary-light dark:border-none rounded-[5px]
@@ -90,9 +91,11 @@
         {/if}
     </div>
     <div class="w-full md:w-1/2 text-center md:text-left justify-end">
-        <h2 class="font-primary text-3xl md:text-4xl text-primary-light dark:text-primary-dark text-center md:text-end mt-10 md:mt-0">laTest on Gallery</h2>
+        <h2 class="font-primary text-3xl md:text-4xl text-primary-light dark:text-primary-dark text-center md:text-end mt-10 md:mt-0">
+            laTest on Gallery</h2>
         <p class="text-sm md:text-lg font-secondary text-text-light dark:text-text-dark text-justify mt-4">
-            Photography is also one of my hobby. So you can look around my gallery on the gallery tab to view a bunch of my shots.
+            Photography is also one of my hobby. So you can look around my gallery on the gallery tab to view a
+            bunch of my shots.
         </p>
     </div>
 </div>

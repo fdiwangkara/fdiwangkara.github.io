@@ -1,5 +1,5 @@
 <script>
-    import { onMount } from "svelte";
+    import {onMount} from "svelte";
 
     let progress = 0;
     let isLoading = true;
@@ -31,3 +31,4 @@
         </div>
     </div>
 {/if}
+
