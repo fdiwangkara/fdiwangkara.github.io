@@ -5,7 +5,10 @@
     import Footer from "$lib/components/Footer.svelte";
 </script>
 
+
 <Loading />
 <Navbar />
+
 <slot />
+
 <Footer />

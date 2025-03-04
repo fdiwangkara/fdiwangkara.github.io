@@ -31,7 +31,7 @@
                 #ABOUT
                 <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary-light dark:bg-primary-dark transition-all duration-300 group-hover:w-1/2"></span>
             </a></li>
-            <li><a href="#blog" class="relative group font-secondary">
+            <li><a href="/gallery" class="relative group font-secondary">
                 #GALLERY
                 <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary-light dark:bg-primary-dark transition-all duration-300 group-hover:w-1/2"></span>
             </a></li>
