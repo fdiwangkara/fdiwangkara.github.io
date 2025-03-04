@@ -96,8 +96,7 @@
 
     @media (max-width: 768px) {
         .parallax {
-            background-attachment: fixed;
-            background-position: center 50%;
+            background-attachment: scroll;
         }
     }
 </style>
