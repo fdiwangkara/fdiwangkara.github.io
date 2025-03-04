@@ -75,7 +75,7 @@
         </button>
         <ul class="flex flex-col space-y-6 mt-20 px-6 text-lg font-secondary">
             <li><a href="/about" on:click={() => isMenuOpen = false}>#ABOUT</a></li>
-            <li><a href="#blog" on:click={() => isMenuOpen = false}>#GALLERY</a></li>
+            <li><a href="/gallery" on:click={() => isMenuOpen = false}>#GALLERY</a></li>
             <li><a href="#proyek" on:click={() => isMenuOpen = false}>#PROJECTS</a></li>
             <li><a href="#kontak" on:click={() => isMenuOpen = false}>#CONTACT</a></li>
         </ul>
