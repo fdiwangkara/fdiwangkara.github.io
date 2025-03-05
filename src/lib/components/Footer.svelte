@@ -22,10 +22,10 @@
             </span>
         </div>
         <nav class="flex flex-col md:flex-row md:space-x-10 lg:space-x-20 text-sm font-secondary font-normal text-start md:text-center space-y-3 md:space-y-0">
-            <a href="#tentang" class={`transition-colors duration-300 ${isDark ? 'text-grey-light hover:text-primary-light' : 'text-grey-dark hover:text-primary-dark'}`}>
+            <a href="/about" class={`transition-colors duration-300 ${isDark ? 'text-grey-light hover:text-primary-light' : 'text-grey-dark hover:text-primary-dark'}`}>
                 #ABOUT
             </a>
-            <a href="#gallery" class={`transition-colors duration-300 ${isDark ? 'text-grey-light hover:text-primary-light' : 'text-grey-dark hover:text-primary-dark'}`}>
+            <a href="/gallery" class={`transition-colors duration-300 ${isDark ? 'text-grey-light hover:text-primary-light' : 'text-grey-dark hover:text-primary-dark'}`}>
                 #GALLERY
             </a>
             <a href="#projects" class={`transition-colors duration-300 ${isDark ? 'text-grey-light hover:text-primary-light' : 'text-grey-dark hover:text-primary-dark'}`}>

@@ -3,7 +3,6 @@
     import {onMount} from "svelte";
     import {tweened} from 'svelte/motion';
     import {cubicOut} from 'svelte/easing';
-    import Parallax from "$lib/components/Parallax.svelte";
 
     let scrollY = tweened(0, {duration: 300, easing: cubicOut});
     let imagesLoaded = {programming: false, hiking: false, photography: false};
@@ -37,7 +36,7 @@
             Greetings to all who see my website. That's if anyone sees it hahahahaha.
         </p>
     </div>
-    <Parallax/>
+    <div class="parallax mt-10"></div>
     <div class="px-10 md:px-20 lg:px-36 xl:px-[200px] pt-10 flex justify-center">
         <div class="max-w-full text-justify">
             <p class="text-sm md:text-lg font-secondary text-text-light dark:text-text-dark">
@@ -56,21 +55,21 @@
         </div>
     </div>
 
-    <div class="px-10 md:px-20 lg:px-36 xl:px-[200px] pt-16 text-center pb-[100px]">
-        <h2 class="font-secondary font-bold text-2xl text-end md:text-3xl text-text-light dark:text-text-dark">
+    <div class=" md:px-20 lg:px-36 xl:px-[200px] pt-16 text-center pb-[100px]">
+        <h2 class="px-10 font-secondary font-bold text-2xl text-end md:text-3xl text-text-light dark:text-text-dark">
             What I Do?
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 mt-20">
             {#each [
-                {title: "prograMminG", image: "/assets/images/programming.png", key: "programming"},
-                {title: "hiKing", image: "/assets/images/hiking.png", key: "hiking"},
-                {title: "phoTographY", image: "/assets/images/photography.png", key: "photography"}
+                {title: "prograMminG", image: "/assets/images/programming.png", key: "programming", description: "Of course, programming is my daily life and I like making projects to improve my skills even more."},
+                {title: "hiKing", image: "/assets/images/hiking.png", key: "hiking", description: "When on holiday, I like to go hiking to various mountains in Indonesia."},
+                {title: "phoTographY", image: "/assets/images/photography.png", key: "photography", description: "Photography is also one of my hobbies because I like taking beautiful moments that should be remembered."}
             ] as item}
                 <div class="flex flex-col items-center">
                     <h3 class="font-primary text-xl md:text-2xl text-text-light dark:text-text-dark mb-1">
                         {item.title}
                     </h3>
-                    <div class="w-100%/4 flex items-center justify-center overflow-hidden relative">
+                    <div class="w-full md:w-100%/4 flex items-center justify-center overflow-hidden relative">
                         {#if !imagesLoaded[item.key]}
                             <div class="absolute inset-0 bg-grey-light dark:bg-grey-dark animate-pulse"></div>
                         {/if}
@@ -78,8 +77,29 @@
                              on:load={() => handleImageLoad(item.key)} class:opacity-0={!imagesLoaded[item.key]}
                              class:opacity-100={imagesLoaded[item.key]} transition-opacity duration-500/>
                     </div>
+                    <p class="px-10 text-sm md:text-lg font-secondary text-text-light dark:text-text-dark mt-4 text-center max-w-xs">
+                        {item.description}
+                    </p>
                 </div>
             {/each}
         </div>
     </div>
 </div>
+
+<style>
+    .parallax {
+        height: 500px;
+        background-image: url("/assets/images/about.JPG");
+        background-attachment: fixed;
+        background-position: center 20%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .parallax {
+            background-attachment: scroll;
+        }
+    }
+</style>
