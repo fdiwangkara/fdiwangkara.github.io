@@ -42,7 +42,8 @@
                         class:bg-primary-dark={selectedCategory === category && $theme === "dark"}
                         class:text-text-dark={selectedCategory === category && $theme === "light"}
                         class:text-text-light={selectedCategory === category && $theme === "dark"}
-                        class:border-none={selectedCategory === category}
+                        class:border-primary-light={selectedCategory === category && $theme === "light"}
+                        class:border-primary-dark={selectedCategory === category && $theme === "dark"}
                         class:border-grey-light={selectedCategory !== category && $theme === "light"}
                         class:border-grey-dark={selectedCategory !== category && $theme === "dark"}
                         class:text-grey-light={selectedCategory !== category && $theme === "light"}
@@ -54,7 +55,7 @@
         </div>
     </div>
 
-    <div class="gallery-grid px-6 md:px-20 lg:px-36 xl:px-[200px] pt-5">
+    <div class="gallery-grid px-6 md:px-20 lg:px-36 xl:px-[200px] pt-5 mb-20">
         {#each filterGallery() as item, index}
             <div class="gallery-item relative">
                 {#if !imagesLoaded[index]}

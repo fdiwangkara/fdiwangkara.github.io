@@ -34,4 +34,25 @@ export const gallery = [
         date: "2023-05-22",
         category: "Landscape"
     },
+    {
+        id: 6,
+        title: "Quiet alley",
+        image: "/assets/images/landscape/alley.JPG",
+        date: "2023-08-18",
+        category: "Landscape"
+    },
+    {
+        id: 7,
+        title: "Building at GBK",
+        image: "/assets/images/pattern/building.JPG",
+        date: "2023-08-19",
+        category: "Pattern"
+    },
+    {
+        id: 7,
+        title: "Taste",
+        image: "/assets/images/food/indomie.jpg",
+        date: "2025-02-14",
+        category: "Foodies"
+    },
 ];
