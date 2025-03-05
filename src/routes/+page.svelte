@@ -51,17 +51,20 @@
             <div class="absolute inset-0 bg-bg-light border border-bg-dark dark:bg-primary-light dark:border-none rounded-[5px]
         translate-y-1 -translate-x-1">
             </div>
-            <button class="relative px-6 py-1 text-base sm:text-sm font-secondary rounded-[5px] border
-        border-text-light text-text-dark dark:text-text-light
-        bg-primary-light dark:bg-bg-light dark:border-text-light
-        transition-all duration-300 group-hover:translate-y-1 group-hover:-translate-x-1 hidden md:block">
+            <button
+                    on:click={() => window.location.href = '/about'}
+                    class="relative px-6 py-1 text-base sm:text-sm font-secondary rounded-[5px] border
+    border-text-light text-text-dark dark:text-text-light
+    bg-primary-light dark:bg-bg-light dark:border-text-light
+    transition-all duration-300 group-hover:translate-y-1 group-hover:-translate-x-1 hidden md:block">
                 Explore
             </button>
+
             <div class="relative md:hidden">
                 <div class="absolute inset-0 bg-bg-light border border-bg-dark dark:bg-primary-light dark:border-none rounded-[5px]
             translate-y-1 -translate-x-1">
                 </div>
-                <button class="relative px-6 py-1 text-[12px] sm:text-sm font-secondary rounded-[5px] border
+                <button on:click={() => window.location.href = '/about'} class="relative px-6 py-1 text-[12px] sm:text-sm font-secondary rounded-[5px] border
             border-text-light text-text-dark dark:text-text-light
             bg-primary-light dark:bg-bg-light dark:border-text-light">
                     Explore

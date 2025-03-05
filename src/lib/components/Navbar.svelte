@@ -40,11 +40,11 @@
             <img src={logoSrc} alt="Filemon Logo" class="h-6">
         </a>
         <ul class="flex space-x-10 text-sm font-secondary">
-            <li><a href="#proyek" class="relative group font-secondary">
+            <li><a href="/projects" class="relative group font-secondary">
                 #PROJECTS
                 <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary-light dark:bg-primary-dark transition-all duration-300 group-hover:w-1/2"></span>
             </a></li>
-            <li><a href="#kontak" class="relative group font-secondary">
+            <li><a href="/contact" class="relative group font-secondary">
                 #CONTACT
                 <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary-light dark:bg-primary-dark transition-all duration-300 group-hover:w-1/2"></span>
             </a></li>
@@ -76,8 +76,8 @@
         <ul class="flex flex-col space-y-6 mt-20 px-6 text-lg font-secondary">
             <li><a href="/about" on:click={() => isMenuOpen = false}>#ABOUT</a></li>
             <li><a href="/gallery" on:click={() => isMenuOpen = false}>#GALLERY</a></li>
-            <li><a href="#proyek" on:click={() => isMenuOpen = false}>#PROJECTS</a></li>
-            <li><a href="#kontak" on:click={() => isMenuOpen = false}>#CONTACT</a></li>
+            <li><a href="/projects" on:click={() => isMenuOpen = false}>#PROJECTS</a></li>
+            <li><a href="/contact" on:click={() => isMenuOpen = false}>#CONTACT</a></li>
         </ul>
     </aside>
 {/if}
