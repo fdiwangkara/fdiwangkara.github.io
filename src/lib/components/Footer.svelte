@@ -28,15 +28,15 @@
             <a href="/gallery" class={`transition-colors duration-300 ${isDark ? 'text-grey-light hover:text-primary-light' : 'text-grey-dark hover:text-primary-dark'}`}>
                 #GALLERY
             </a>
-            <a href="#projects" class={`transition-colors duration-300 ${isDark ? 'text-grey-light hover:text-primary-light' : 'text-grey-dark hover:text-primary-dark'}`}>
+            <a href="/projects" class={`transition-colors duration-300 ${isDark ? 'text-grey-light hover:text-primary-light' : 'text-grey-dark hover:text-primary-dark'}`}>
                 #PROJECTS
             </a>
-            <a href="#contact" class={`transition-colors duration-300 ${isDark ? 'text-grey-light hover:text-primary-light' : 'text-grey-dark hover:text-primary-dark'}`}>
+            <a href="/contact" class={`transition-colors duration-300 ${isDark ? 'text-grey-light hover:text-primary-light' : 'text-grey-dark hover:text-primary-dark'}`}>
                 #CONTACT
             </a>
         </nav>
         <div class="flex space-x-4 text-xl">
-            <a href="https://linkedin.com/filemon-diwangkara" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/filemon-diwangkara-bani-saptaji-21641b297/" target="_blank" rel="noopener noreferrer"
                class={`transition-colors duration-300 ${isDark ? 'text-text-light hover:text-[#0077B5]' : 'text-text-dark hover:text-[#0077B5]'}`}>
                 <i class="fab fa-linkedin"></i>
             </a>
