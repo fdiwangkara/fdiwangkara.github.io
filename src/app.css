@@ -53,8 +53,7 @@
 
 @font-face {
     font-family: 'fourth';
-    src: url('/assets/fonts/IBMPlexSans-Bold.ttf') format('truetype');
-    font-weight: bold;
+    src: url('/assets/fonts/Harmond-SemBdItaCond.otf') format('opentype');
     font-style: normal;
 }
 
