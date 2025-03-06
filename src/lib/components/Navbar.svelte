@@ -79,5 +79,5 @@
             <li><a href="/projects" on:click={() => isMenuOpen = false}>#PROJECTS</a></li>
             <li><a href="/contact" on:click={() => isMenuOpen = false}>#CONTACT</a></li>
         </ul>
-    </aside>
+    </aside>q
 {/if}
