@@ -43,7 +43,7 @@ export default {
         primary: ['primary', ...defaultTheme.fontFamily.sans],
         secondary: ['secondary', ...defaultTheme.fontFamily.mono],
         third: ['third', ...defaultTheme.fontFamily.sans],
-        fourth: ['fourth', ...defaultTheme.fontFamily.sans],
+        fourth: ['fourth', ...defaultTheme.fontFamily.serif],
       },
     },
   },

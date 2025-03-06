@@ -77,7 +77,7 @@
                              on:load={() => handleImageLoad(item.key)} class:opacity-0={!imagesLoaded[item.key]}
                              class:opacity-100={imagesLoaded[item.key]} transition-opacity duration-500/>
                     </div>
-                    <p class="px-10 text-sm md:text-lg font-secondary text-text-light dark:text-text-dark mt-4 text-center max-w-xs">
+                    <p class="px-10 text-sm md:text-lg font-secondary text-text-light dark:text-text-dark mt-4 text-center">
                         {item.description}
                     </p>
                 </div>
@@ -97,7 +97,7 @@
         width: 100%;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         .parallax {
             background-attachment: scroll;
         }
