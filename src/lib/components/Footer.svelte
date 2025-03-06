@@ -53,7 +53,13 @@
     <div class="w-full flex justify-center mt-8">
         <div class={`h-[1px] w-full md:max-w-[calc(100%-150px)] mx-10 md:mx-0 ${isDark ? 'bg-grey-light' : 'bg-grey-dark'}`}></div>
     </div>
-    <div class="text-[12px] font-secondary mt-8">
-        Copyright © 2025 Filemon Diwangkara
+    <div class="text-[12px] font-secondary mt-8 flex flex-col md:flex-row items-center justify-center text-center space-y-2 md:space-y-0">
+        <span>Copyright © 2025 Filemon Diwangkara</span>
+        <span class="hidden md:inline mx-2">|</span>
+        <span class="flex items-center space-x-1">
+        <img src="/assets/icons/svelte.svg" alt="Svelte" class="w-4 h-4">
+        <span>Made with Svelte</span>
+    </span>
     </div>
+
 </footer>

@@ -93,8 +93,8 @@
                  class="w-full max-w-[400px] h-auto shadow-lg transition-opacity duration-500">
         {/if}
     </div>
-    <div class="w-full md:w-1/2 text-center md:text-left justify-end">
-        <h2 class="font-primary text-3xl md:text-4xl text-primary-light dark:text-primary-dark text-center md:text-end mt-10 md:mt-0">
+    <div class="w-full md:w-1/2 text-center md:text-left justify-end mb-20 md:mb-0">
+        <h2 class="font-primary text-3xl md:text-4xl text-primary-light dark:text-primary-dark text-center md:text-end md:mt-0">
             laTest on Gallery</h2>
         <p class="text-sm md:text-lg font-secondary text-text-light dark:text-text-dark text-justify mt-4">
             Photography is also one of my hobby. So you can look around my gallery on the gallery tab to view a
