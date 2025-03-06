@@ -4,11 +4,23 @@
 
     let scrolled = false;
     let isMenuOpen = false;
+    let isDark = false;
 
     onMount(() => {
         const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            theme.set(savedTheme);
+            isDark = savedTheme === "dark";
+        } else {
+            isDark = systemTheme.matches;
+            theme.set(isDark ? "dark" : "light");
+        }
+
         systemTheme.addEventListener('change', (event) => {
-            theme.set(event.matches ? 'dark' : 'light');
+            isDark = event.matches;
+            theme.set(isDark ? "dark" : "light");
         });
 
         window.addEventListener("scroll", () => {
@@ -16,11 +28,11 @@
         });
     });
 
-    $: isDark = $theme === "dark";
     $: logoSrc = isDark ? "/assets/icons/logo_dark.svg" : "/assets/icons/logo_light.svg";
     $: hamburgerSrc = isDark ? "/assets/icons/hamburger_dark.svg" : "/assets/icons/hamburger_light.svg";
-    $: closeSrc = isDark ? "/assets/icons/close_dark.svg" : "/assets/icons/close_dark.svg";
+    $: closeSrc = isDark ? "/assets/icons/close_dark.svg" : "/assets/icons/close_light.svg";
 </script>
+
 <nav class={`fixed z-50 top-0 left-0 w-full py-2 px-8 backdrop-blur-md transition-all duration-300
     hidden md:flex items-center justify-between
     ${isDark ? 'bg-bg-dark text-text-dark border-text-dark' : 'bg-bg-light text-text-light border-text-light'}
@@ -51,6 +63,7 @@
         </ul>
     </div>
 </nav>
+
 <nav class={`fixed z-50 top-0 left-0 w-full py-2 px-8 backdrop-blur-md z-50 transition-all duration-300 flex md:hidden items-center justify-between
     ${isDark ? 'bg-bg-dark text-text-dark border-text-dark' : 'bg-bg-light text-text-light border-text-light'}
     ${scrolled ? 'scrolled top-0 border-b' : 'top-[25px] border-b'}`}>
@@ -61,11 +74,13 @@
         <img src={hamburgerSrc} alt="Menu">
     </button>
 </nav>
+
 {#if scrolled}
     <div class="fixed top-[calc(100%+1px)] left-0 w-full h-[1px]
         ${isDark ? 'bg-text-dark' : 'bg-text-light'}">
     </div>
 {/if}
+
 {#if isMenuOpen}
     <div class="fixed inset-0 bg-black bg-opacity-50 z-50" on:click={() => isMenuOpen = false}></div>
     <aside class="fixed top-0 right-0 h-screen w-1/2 bg-bg-dark dark:bg-bg-light text-text-dark dark:text-text-light z-50 shadow-lg
@@ -79,5 +94,5 @@
             <li><a href="/projects" on:click={() => isMenuOpen = false}>#PROJECTS</a></li>
             <li><a href="/contact" on:click={() => isMenuOpen = false}>#CONTACT</a></li>
         </ul>
-    </aside>q
+    </aside>
 {/if}

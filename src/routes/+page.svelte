@@ -7,7 +7,8 @@
         new Date(current.date) > new Date(latest.date) ? current : latest
     );
     let isLoading = true;
-    let isPrimary = true;
+    let fontIndex = 0;
+    const fonts = ["font-primary", "font-third", "font-fourth"];
 
     onMount(() => {
         if (typeof window !== 'undefined') {
@@ -15,8 +16,8 @@
             theme.set(systemTheme.matches ? 'dark' : 'light');
         }
         setInterval(() => {
-            isPrimary = !isPrimary;
-        }, 500);
+            fontIndex = (fontIndex + 1) % fonts.length;
+        }, 300);
         setTimeout(() => {
             isLoading = false;
         }, 2000);
@@ -44,7 +45,7 @@
     <div class="pt-[50px] md:pt-[100px] flex flex-col md:flex-row items-center justify-between w-full gap-6">
         <p class="text-sm sm:text-md md:text-lg font-secondary text-text-light dark:text-text-dark text-center md:text-left max-w-[295px] md:max-w-[500px]">
             Welcome to the fdiwangkara website. Actually, this is a website that I created to introduce who
-            <span class={`text-primary-light dark:text-primary-dark transition-all duration-500 ${isPrimary ? 'font-primary' : 'font-third'}`}>FilemOn DiWangkarA</span>
+            <span class={`text-primary-light dark:text-primary-dark transition-all duration-500 ${fonts[fontIndex]}`}>FilemOn DiWangkarA</span>
             is.
         </p>
         <div class="relative group mt-[25px] md:mt-0">

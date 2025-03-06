@@ -36,7 +36,7 @@
             </a>
         </nav>
         <div class="flex space-x-4 text-xl">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://linkedin.com/filemon-diwangkara" target="_blank" rel="noopener noreferrer"
                class={`transition-colors duration-300 ${isDark ? 'text-text-light hover:text-[#0077B5]' : 'text-text-dark hover:text-[#0077B5]'}`}>
                 <i class="fab fa-linkedin"></i>
             </a>
